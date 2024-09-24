@@ -36,6 +36,7 @@ io.on("connection", (socket) => {
   socket.on(
     "chat-message",
     (roomId: string, message: { userId: string; text: string }) => {
+      console.log(`Message from ${message.userId} in room ${roomId}: ${message.text}`);
       io.to(roomId).emit("receive-message", {
         userId: message.userId,
         text: message.text,
