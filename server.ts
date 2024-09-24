@@ -2,10 +2,9 @@ import { createServer } from "http";
 import { Server } from "socket.io";
 
 const port = 4000;
-// const isProduction = process.env.NODE_ENV === "production";
 const isProduction = true;
-// const hostname = isProduction ? "https://dae-hwa-cheong.netlify.app" : "localhost";
 const hostname = "https://dae-hwa-cheong.netlify.app";
+
 // Create an HTTP server
 const httpServer = createServer();
 
